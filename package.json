@@ -1,0 +1,28 @@
+{
+  "name": "electricians-championship",
+  "version": "1.0.0",
+  "description": "promo page for six electricians championship",
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build"
+  },
+  "author": "dm1vr",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-less": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "htmlmin": "^0.0.7",
+    "posthtml-include": "^1.7.2"
+  }
+}
