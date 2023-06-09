@@ -37,7 +37,7 @@ gulp.task('html', function(){
 });
 
 gulp.task("sprite", function () {
-    return gulp.src("source/img/sprite-*.svg")
+    return gulp.src("source/img/*.svg")
       .pipe(svgstore({
         inlineSvg: true
       }))
@@ -59,6 +59,7 @@ gulp.task('server', function(){
     gulp.watch('source/index.html', gulp.series('html', 'refresh'));
     gulp.watch('source/html/**/*.html', gulp.series('html', 'refresh'));
     gulp.watch('source/img/sprite-*.svg', gulp.series('sprite', 'refresh'));
+    gulp.watch('source/timepad.css', gulp.series('copy-timepad-css', 'refresh'));
 });
 
 gulp.task('refresh', function(done){
@@ -72,18 +73,25 @@ gulp.task('clean', function () {
 
 gulp.task('copy', function(){
     return gulp.src([
-        'source/fonts/**',
         'source/img/**',
         'source/favicon.*',
         'source/js/**',
-        'source/header__footer/**',
-        'source/documentation/**'
+        'source/program.pdf',
         ], {
             base: 'source',
         })
         .pipe(gulp.dest('build'));
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'html', 'sprite'));
+gulp.task('copy-timepad-css', function(){
+    return gulp.src([
+        'source/timepad.css'
+        ], {
+            base: 'source',
+        })
+        .pipe(gulp.dest('build'));
+});
+
+gulp.task('build', gulp.series('clean', 'copy', 'copy-timepad-css', 'css', 'html', 'sprite'));
 
 gulp.task('start', gulp.series('build', 'server'));

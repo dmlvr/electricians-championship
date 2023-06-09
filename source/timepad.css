@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.selectedTicketsInfo {
+  color: transparent;
+  display: none !important;
+}
+
+.b-registration__question_comment {
+  display: none !important;
+}
+
+.i-page {
+  background-color: transparent !important;
+  width: 100%;
+  font-size: 20px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  color: white;
+}
+
+.i-page a {
+  color: #FFCC18;
+}
+
+.b-reg-table__row {
+  background-color: transparent !important;
+}
+
+.b-reg-table {
+  border: none;
+}
+
+.b-attendee {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.row-fluid {
+  width: calc(50% - 10px);
+}
+
+@media (max-width: 768px) {
+  .row-fluid {
+    width: 100% !important;
+  }
+}
+
+.row-fluid:nth-child(5),
+.row-fluid:nth-child(6),
+.row-fluid:nth-child(7) {
+  width: 100%;
+}
+
+.control-group {
+  width: 100%;
+}
+
+/* лого timepad */
+.twf2-branding {
+  display: none;
+}
+
+.b-registration__question {
+  color: white;
+  font-weight: 400;
+  font-size: 30px !important;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.b-registration__question_mandatory {
+  color: #FFCC18;
+}
+
+.b-input {
+  width: 100%;
+  font-size: 30px;
+  padding: 20px 30px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: none;
+  color: #131313;
+}
+
+.b-registration__check-block,
+.b-input-block {
+  display: block;
+}
+
+.b-input-block {
+  margin-bottom: 15px;
+}
+
+.b-registration__label {
+  font-size: 30px;
+  color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.b-registration__label:first-child {
+  margin-top: 20px;
+}
+
+.b-radio {
+  width: 30px;
+  height: 30px;
+}
+
+.b-registration__label span {
+  font-size: 25px;
+  width: calc(100% - 40px);
+}
+
+.b-registration__check:first-child {
+  display: none;
+}
+
+.b-registration__accept {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.b-registration__accept input {
+  width: 30px;
+  height: 30px;
+}
+
+.b-registration__accept a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.b-registration__accept a:hover {
+  text-decoration: underline;
+}
+
+.b-pro-widget__terms-popup {
+  color: white;
+  font-size: 22px;
+}
+
+.b-pro-wiget__reg-button,
+.b-printable-ticket__button {
+  margin-top: 30px;
+  background-color: #ffcc18;
+  border-radius: 12px;
+  font-size: 35px;
+  padding: 32px 90px;
+  color: #131313;
+  border: none;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+@media (max-width: 580px) {
+  .b-pro-wiget__reg-button,
+  .b-printable-ticket__button {
+  padding: 32px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+}
+
+.b-pro-wiget__reg-button:disabled {
+  background-color: #f8e291;
+  color: gray;
+}
+
+.b-pro-wiget__reg-button:not(:disabled):hover,
+.b-printable-ticket__button:hover {
+  background-color: #f2ab26;
+  color: white;
+  cursor: pointer;
+}
+
+.b-registration__section_success {
+  margin-top: 5vw; 
+}
+
+.b-printable-ticket {
+  display: flex;
+  flex-direction: column;
+}
+
+.b-error-block {
+  color: red;
+}

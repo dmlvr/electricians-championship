@@ -1,0 +1,74 @@
+.register {
+  padding: 163px 5vw 150px 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  background-color: @black;
+  position: relative;
+  border-bottom: 30px solid @yellow;
+
+  @media (max-width: @xl-width) {
+    flex-direction: column;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 204, 24, 0.27);
+    mix-blend-mode: lighten;
+    filter: blur(240.5px);
+
+    @media (max-width: @m-width) {
+      display: none;
+    }
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+  }
+
+  
+}
+
+.register>svg {
+    width: 50%;
+    height: auto;
+
+    @media (max-width: 1700px) {
+      width: 35%;
+    }
+
+    @media (max-width: @xl-width) {
+      width: 50%;
+      align-self: center;
+    }
+}
+
+.register {
+  & > div {
+    width: 50%;
+
+    @media (max-width: 1700px) {
+      width: 75%;
+    } 
+
+    @media (max-width: @xl-width) {
+      width: 100%;
+    }
+  }
+
+}
+
+.register__form {
+  align-self: flex-end;
+}

@@ -6,23 +6,27 @@
 }
 
 .container {
-  width: @desktop-width;
+  width: @xl-width;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 33px;
+  padding-right: 33px;
   
-  @media (max-width: @desktop-width) {
-    width: @tablet-width;
-    padding-left: 30px;
-    padding-right: 30px;
+  @media (max-width: @xl-width) {
+    width: @l-width;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  @media (max-width: @tablet-width) {
-    width: 100%;
-    min-width: @mobile-width;
+  @media (max-width: @l-width) {
+    width: @m-width;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  @media (max-width: @m-width) {
+    width: 100%;
+    min-width: @s-width;
   }
 }
 
@@ -34,15 +38,57 @@
   margin: -1px;
 }
 
+.title(@color: @black) {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  margin-bottom: 97px;
+
+  @media (max-width: @l-width) {
+    gap: 30px;
+    margin-bottom: 75px;
+  }
+
+  h2 {
+    .container;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: @xxl-text;
+    color: @color;
+
+    @media (max-width: @m-width) {
+      font-size: @l-text;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: @color;
+  }
+}
+
+.btn-reset {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
 .slider-arrows {
   display: flex;
   gap: 8px;
 
   & button {
-    width: 48px;
+    .btn-reset;
+    width: 60px;
     aspect-ratio: 1/1;
     background-color: @yellow;
-    color: @gray;
+    color: @black;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -78,7 +124,7 @@
   }
 
   & li {
-    width: 20px;
+    width: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,34 +156,17 @@
   }
 }
 
-.title(@img) {
-  margin-bottom: 48px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  &::before {
-    content: '';
-    width: 48px;
-    aspect-ratio: 1/1;
-    border-radius: 6px;
-    background-color: @yellow;
-    background-image: url(@img);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 24px;
-  }
-
-  h2,
-  p {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-
 .horizontal-line-cutting {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.menu-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0px 10px 30px rgba(black, 0.3);
 }
