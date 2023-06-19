@@ -68,6 +68,22 @@
     width: calc(40% - 12px);
   }
 
+  &--avs {
+    svg {
+      padding: 0 2.5rem;
+    }
+  }
+
+  &--rs {
+    svg {
+      padding-bottom: 2rem;
+
+      @media (max-width: 550px) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
   @media (max-width: @l-width) {
     width: calc(50% - 10px) !important;
   }

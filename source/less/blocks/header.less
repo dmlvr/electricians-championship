@@ -123,6 +123,10 @@
       .header__bottom-scroll-to-top {
         display: block;
       }
+
+      .header__bottom-container a:last-child {
+        display: flex;
+      }
     }
   }
 
@@ -134,6 +138,10 @@
     padding: 50px 30px 0 0;
     width: 100%;
     z-index: 101;
+
+    .header__bottom-container a:last-child {
+      display: flex;
+    }
 
     &--active {
       left: 0;
@@ -211,6 +219,10 @@
     padding-bottom: 0;
   }
 
+  &:last-child {
+    font-weight: 700;
+    display: none;
+  }
   
 }
 
